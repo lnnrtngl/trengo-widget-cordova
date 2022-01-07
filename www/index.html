@@ -50,6 +50,16 @@
             window.Trengo.launcherOnlineStatus = true;
             window.Trengo.emojiPicker = false;
 
+            // Below code would automatically identify the customer (Trengo contact)
+            window.Trengo.contact_data = {
+                email: 'johndoe@example.com',
+                name: 'John Doe',
+                // custom_fields: [{
+                //     field_id: 82736, // e.g. custom field id for the customers registered phone number
+                //     value: '+14842989013'
+                // }]
+            };
+
             window.Trengo.on_ready = function() {
                 // You could programmatically call below method to only show widget on contact page
                 // or for example once authenticated
