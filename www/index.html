@@ -37,7 +37,7 @@
             window.Trengo = window.Trengo || {};
             // Trengo widget key, which can be found in; Settings -> Website widgets -> Installation
             window.Trengo.key = 'LHO44PUODhuaajL';
-            window.Trengo.render = false; // extra
+            // window.Trengo.render = false; // extra
             (function(d, script, t) {
                 script = d.createElement('script');
                 script.type = 'text/javascript';
@@ -61,25 +61,38 @@
                 // }]
             };
 
-            window.Trengo.on_ready = function() {
-                // You could programmatically call below method to only show widget on contact page
-                // or for example once authenticated
-                window.Trengo.Api.Widget.render();
+            // window.Trengo.on_ready = function() {
+            //     // You could programmatically call below method to only show widget on contact page
+            //     // or for example once authenticated
+            //     window.Trengo.Api.Widget.render();
 
-                // Check https://developers.trengo.com/docs/methods for more
-                window.Trengo.Api.Widget.open('chat');
-                // window.Trengo.Api.Widget.open('help_center'); // would open the help center
-            }
+            //     // Check https://developers.trengo.com/docs/methods for more
+            //     window.Trengo.Api.Widget.open('chat');
+            //     // window.Trengo.Api.Widget.open('help_center'); // would open the help center
+            // }
         </script>
         <link rel="stylesheet" href="css/index.css">
         <title>Hello World</title>
     </head>
     <body>
         <div class="app">
-            <h1>Apache Cordova 🙏</h1>
-            <div id="deviceready" class="blink">
-                <p class="event listening">Connecting to Device</p>
-                <p class="event received">Device is Ready</p>
+            <h1>Tell us how we can help<br>👋</h1>
+            <div>Our crew of superheroes are standing by for service & support!</div>
+            <div class="button-container">
+                <div
+                    class="button"
+                    onclick="window.Trengo.Api.Widget.open('chat')"
+                >
+                    <h2>Chat</h2>
+                    Start a conversation now!
+                </div>
+                <div
+                    class="button"
+                    onclick="window.Trengo.Api.Widget.open('help_center')"
+                >
+                    <h2>FAQ</h2>
+                    Find intelligent answers instantly
+                </d>
             </div>
         </div>
         <script src="cordova.js"></script>
